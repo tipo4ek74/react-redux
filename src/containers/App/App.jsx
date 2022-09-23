@@ -1,6 +1,7 @@
-import PeoplePage from '../PeoplePage';
+import PeoplePage from '@containers/PeoplePage';
 import cn from 'classnames';
 import styles from './App.module.css';
+
 
 const App = () => {
   return (

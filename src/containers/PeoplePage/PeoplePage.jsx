@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import { withErrorApi } from '../../hoc-helpers/withErrorApi';
+import { withErrorApi } from '@hoc-helpers/withErrorApi';
 
-import { API_PEOPLE } from '../../constants/api';
-import { getApiResourse } from '../../utils/network';
-import { getPeopleId, getPeopleImg } from '../../services/getPeopleData';
-import PeopleList from '../../components/PeoplePage/PeopleList';
+import { API_PEOPLE } from '@constants/api';
+import { getApiResourse } from '@utils/network';
+import { getPeopleId, getPeopleImg } from '@services/getPeopleData';
+import PeopleList from '@components/PeoplePage/PeopleList';
 
 
 
@@ -19,7 +19,6 @@ const PeoplePage = ({ setErrorApi }) => {
             const peopleList = res.results.map(({name, url}) => {
                 const id = getPeopleId(url);
                 const img = getPeopleImg(id);
-                console.log(img)
     
                 return {
                     id,
